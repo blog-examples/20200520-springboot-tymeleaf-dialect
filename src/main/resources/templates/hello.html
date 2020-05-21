@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="layouts/layout">
+      layout:decorate="~{layouts/layout}">
 
-<!-- hello.html 고유 CSS 추가 -->
-<th:block layout:fragment="css">
-</th:block>
-
-<!-- hello.html 고유 스크립트 추가 -->
-<th:block layout:fragment="script">
+<head>
     <script>
         alert("hello.html");
     </script>
-</th:block>
+</head>
 
 <div layout:fragment="content">
-
     <div style="border: 1px solid red">
-        hello.html 입니다.
-        즉 컨텐츠 영역
+            hello.html 입니다.
+            즉 컨텐츠 영역
     </div>
-
 </div>
+
+
 </html>
